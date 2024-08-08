@@ -1,0 +1,8 @@
+#!/bin/bash
+streamlink -l none --twitch-low-latency --twitch-disable-ads twitch.tv/${1} best &
+if [ $? == 0 ]
+then
+    echo "opening stream!"
+else
+    echo "error opening stream"
+fi
